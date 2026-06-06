@@ -21,10 +21,11 @@
           };
 
           kotlin-lsp = pkgs.callPackage ./kotlin-lsp.nix { };
+          dta-cli = pkgs.callPackage ./dta-cli.nix { };
         in
         {
           inherit kotlin-lsp;
-          default = kotlin-lsp;
+          inherit dta-cli;
         }
       );
     };
