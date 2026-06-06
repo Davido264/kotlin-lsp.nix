@@ -21,11 +21,10 @@
           };
 
           kotlin-lsp = pkgs.callPackage ./kotlin-lsp.nix { };
-          kotlin-lsp-2 = pkgs.callPackage ./kotlin-lsp-alt.nix { };
         in
         {
           inherit kotlin-lsp;
-          inherit kotlin-lsp-2;
+          default = kotlin-lsp;
         }
       );
     };
